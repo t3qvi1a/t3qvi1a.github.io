@@ -245,7 +245,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          514 字
+          541 字
         
       </span>
     
@@ -374,7 +374,7 @@
 <li>Hexo 将笔记转换成网页文件，并上传到 Github</li>
 <li>Github 将网页文件渲染成网页</li>
 </ol>
-<p>obsidian 中的笔记以 <code>.md</code> 格式保存，Hexo 将 <code>.md</code> 文件转换成 <code>html</code> 格式，并且通过 git 上传到 Github 的特殊仓库，这个仓库名称必须是 <code>&lt;username&gt;.github.io</code>。Github 会自动将这个仓库中的内容渲染成网页，发布到 <code>&lt;username&gt;.github.io</code> 网站上。这样就实现了零成本完美搭建并维护个人博客。</p>
+<p>obsidian 中的笔记以 <code>.md</code> 格式保存，Hexo 将 <code>.md</code> 文件转换成 <code>html</code> 格式，并且通过 git 上传到 Github 的特殊仓库，这个仓库名称必须是 <code>&lt;username&gt;.github.io</code>。</p>
 <p>Hexo + Obsidian 完美维护博客的优点</p>
 <ol>
 <li>图片保存在本地，上传到 Github，不用配置图床</li>
@@ -383,10 +383,11 @@
 </ol>
 <h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><ol>
 <li>Hexo 配置</li>
+<li>Git 配置</li>
 <li>Github 仓库配置</li>
 <li>Obsidian 配置</li>
 </ol>
-<h2 id="Hexo-配置"><a href="#Hexo-配置" class="headerlink" title="Hexo 配置"></a>Hexo 配置</h2><p>参考这篇文章[^1]  <a target="_blank" rel="noopener" href="https://blog.fiveth.cc/p/bb32/">https://blog.fiveth.cc/p/bb32/</a></p>
+<h2 id="Hexo-配置"><a href="#Hexo-配置" class="headerlink" title="Hexo 配置"></a>Hexo 配置</h2><p>参考这篇文章 [^1]<br><a target="_blank" rel="noopener" href="https://blog.fiveth.cc/p/bb32/">https://blog.fiveth.cc/p/bb32/</a></p>
 <ol>
 <li>安装 git <a target="_blank" rel="noopener" href="https://git-scm.com/install/">https://git-scm.com/install/</a></li>
 <li>安装 nodejs <a target="_blank" rel="noopener" href="https://nodejs.org/en/s">https://nodejs.org/en/s</a></li>
@@ -401,7 +402,12 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo -v<br></code></pre></td></tr></table></figure>
 
 
-<h2 id="Github-仓库配置"><a href="#Github-仓库配置" class="headerlink" title="Github 仓库配置"></a>Github 仓库配置</h2><p>博客文件和 Hexo 配置<br>所有笔记和图片附件放在 <code>source</code> 文件夹中</p>
+<h2 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h2><h2 id="Github-仓库配置"><a href="#Github-仓库配置" class="headerlink" title="Github 仓库配置"></a>Github 仓库配置</h2><p>打开 Github，创建一个 Github 账号，新建一个 Github 仓库</p>
+<p><img src="/../attachments/Pasted%20image%2020251206112726.png" srcset="/img/loading.gif" lazyload></p>
+<p>仓库名称必须是 <code>username.github.io</code><br>Github 会自动将这个仓库中的内容渲染成网页，发布到 <code>&lt;username&gt;.github.io</code> 网站上</p>
+<p><img src="/../attachments/Pasted%20image%2020251206112914.png" srcset="/img/loading.gif" lazyload></p>
+<p>下面的设置可以都不改，直接点击创建</p>
+<h2 id="Obsidian-配置"><a href="#Obsidian-配置" class="headerlink" title="Obsidian 配置"></a>Obsidian 配置</h2><p>博客文件和 Hexo 配置<br>所有笔记和图片附件放在 <code>source</code> 文件夹中</p>
 <p><img src="/../attachments/Pasted%20image%2020251206105559.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="/../attachments/Pasted%20image%2020251203195520.png" srcset="/img/loading.gif" lazyload></p>
 <p>同时 <code>source</code> 文件夹也是 Obsidian 的工作文件夹</p>
