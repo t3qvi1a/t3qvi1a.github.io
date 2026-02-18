@@ -42,6 +42,29 @@
   </entry>
   
   <entry>
+    <title>Git 极简工作流</title>
+    <link href="https://tequila.xin/2025/12/26/Git%20%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    <id>https://tequila.xin/2025/12/26/Git%20%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81/</id>
+    <published>2025-12-26T03:10:41.000Z</published>
+    <updated>2026-01-16T06:46:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>初始化本地项目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br></code></pre></td></tr></table></figure><p>编写代码，提交代码</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;peace&quot;</span><br></code></pre></td></tr></table></figure><p>本地仓库与远程仓库同步</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin git@github.com:username/repo.git<br>git branch -M main<br>git push -u origin main<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;初始化本地项目&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="添砖加瓦" scheme="https://tequila.xin/categories/%E6%B7%BB%E7%A0%96%E5%8A%A0%E7%93%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Github Pages 域名更换 + 基于 Cloudflare 加速国内访问</title>
     <link href="https://tequila.xin/2025/12/06/Github%20Pages%20%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2%20+%20%E5%9F%BA%E4%BA%8E%20Cloudflare%20%E5%8A%A0%E9%80%9F%E5%9B%BD%E5%86%85%E8%AE%BF%E9%97%AE/"/>
     <id>https://tequila.xin/2025/12/06/Github%20Pages%20%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2%20+%20%E5%9F%BA%E4%BA%8E%20Cloudflare%20%E5%8A%A0%E9%80%9F%E5%9B%BD%E5%86%85%E8%AE%BF%E9%97%AE/</id>

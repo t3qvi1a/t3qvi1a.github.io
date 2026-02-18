@@ -29,6 +29,25 @@
   
   
   <entry>
+    <title>Git 极简工作流</title>
+    <link href="/2025/12/26/Git%20%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    <url>/2025/12/26/Git%20%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81/</url>
+    
+    <content type="html"><![CDATA[<p>初始化本地项目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br></code></pre></td></tr></table></figure><p>编写代码，提交代码</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;peace&quot;</span><br></code></pre></td></tr></table></figure><p>本地仓库与远程仓库同步</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin git@github.com:username/repo.git<br>git branch -M main<br>git push -u origin main<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>添砖加瓦</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Github Pages 域名更换 + 基于 Cloudflare 加速国内访问</title>
     <link href="/2025/12/06/Github%20Pages%20%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2%20+%20%E5%9F%BA%E4%BA%8E%20Cloudflare%20%E5%8A%A0%E9%80%9F%E5%9B%BD%E5%86%85%E8%AE%BF%E9%97%AE/"/>
     <url>/2025/12/06/Github%20Pages%20%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%8D%A2%20+%20%E5%9F%BA%E4%BA%8E%20Cloudflare%20%E5%8A%A0%E9%80%9F%E5%9B%BD%E5%86%85%E8%AE%BF%E9%97%AE/</url>
