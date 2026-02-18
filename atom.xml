@@ -6,7 +6,7 @@
   <link href="https://tequila.xin/atom.xml" rel="self"/>
   
   <link href="https://tequila.xin/"/>
-  <updated>2026-01-16T06:46:33.000Z</updated>
+  <updated>2026-02-18T02:24:31.000Z</updated>
   <id>https://tequila.xin/</id>
   
   <author>
@@ -17,25 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Git 极简工作流</title>
-    <link href="https://tequila.xin/2025/12/26/Git%20%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
-    <id>https://tequila.xin/2025/12/26/Git%20%E6%9E%81%E7%AE%80%E5%B7%A5%E4%BD%9C%E6%B5%81/</id>
-    <published>2025-12-26T03:10:41.000Z</published>
-    <updated>2026-01-16T06:46:33.000Z</updated>
+    <title>WSL 存储空间压缩</title>
+    <link href="https://tequila.xin/2026/02/18/WSL%20%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E5%8E%8B%E7%BC%A9/"/>
+    <id>https://tequila.xin/2026/02/18/WSL%20%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E5%8E%8B%E7%BC%A9/</id>
+    <published>2026-02-18T02:13:11.000Z</published>
+    <updated>2026-02-18T02:24:31.000Z</updated>
     
-    <content type="html"><![CDATA[<p>初始化本地项目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br>git add .<br>git commit -m <span class="hljs-string">&quot;base&quot;</span><br></code></pre></td></tr></table></figure><p>测试是否能与 github 连接</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -T git@github.com<br></code></pre></td></tr></table></figure><p>本地仓库与远程仓库同步</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin git@github.com:username/repo.git<br>git branch -M main<br>git push -u origin main<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>ext4.vhdx 是 wsl 中用于存储 linux 文件系统的虚拟磁盘文件，存放在 C 盘。<br>这个文件会随着 wsl 的日常使用不断增大，<br>删除文件后，也不会自动变小，<br>所以需要定期手动清理。</p><h2 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h2><ol><li>在 wsl 中删除不需要的文件或者占用较大的目录</li><li>关闭 wsl 服务</li><li>在 win+r 中输入 <code>diskpart</code>，进入应用页面</li><li>选择 <code>ext4.vhdx</code> 文件</li><li>压缩 <code>ext4.vhdx</code> 文件</li></ol><p>查看 linux 系统中当前目录下所有文件夹大小占比</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">du</span> -ah --max-depth 1<br></code></pre></td></tr></table></figure><p>随后删除不需要的文件，比如 <code>.cache</code> 目录下的文件</p><p>在 cmd 中关闭 wsl 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wsl --shutdown<br></code></pre></td></tr></table></figure><p>win + r 输入 diskpart 进入页面</p><p><img src="/../attachments/Pasted%20image%2020260218101505.png"></p><p><img src="/../attachments/Pasted%20image%2020260218101512.png"></p><p>选择需要压缩的 <code>ext4.vhdx</code> 文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">select</span> vdisk file=<span class="hljs-string">&quot;C:\Users\geqian\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc\LocalState\ext4.vhdx&quot;</span><br></code></pre></td></tr></table></figure><p>压缩当前文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">compact vdisk<br></code></pre></td></tr></table></figure><p><img src="/../attachments/Pasted%20image%2020260218101522.png"></p><p>等待压缩完毕即可</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://blog.csdn.net/weixin_50485954/article/details/133695346">https://blog.csdn.net/weixin_50485954/article/details/133695346</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;初始化本地项目&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;</summary>
+    <summary type="html">&lt;p&gt;ext4.vhdx 是 wsl 中用于存储 linux 文件系统的虚拟磁盘文件，存放在 C 盘。&lt;br&gt;这个文件会随着 wsl 的日常使用不断增大，&lt;br&gt;删除文件后，也不会自动变小，&lt;br&gt;所以需要定期手动清理。&lt;/p&gt;
+&lt;h2 id=&quot;主要步骤&quot;&gt;&lt;a href=&quot;#主</summary>
       
     
     
     
     <category term="添砖加瓦" scheme="https://tequila.xin/categories/%E6%B7%BB%E7%A0%96%E5%8A%A0%E7%93%A6/"/>
     
+    
+    <category term="Linux" scheme="https://tequila.xin/tags/Linux/"/>
     
   </entry>
   
